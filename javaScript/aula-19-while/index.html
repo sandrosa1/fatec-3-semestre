@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>While</title>
+    <script>
+        var number;
+        var numberOne;
+        var numberTwo;
+        var mult;
+        var cont;
+
+        numberTwo = true;
+        cont = 0;
+        while(numberTwo){
+            document.write("Sandro <br>");
+            cont++;
+            if(cont > 9){
+                numberTwo = false;
+            }
+        }
+
+        number =0;
+        while (number <= 10){
+            mult = 0
+            document.write("Tabuada do: "+number+"<br>");
+            while (mult <= 10){
+                document.write(number+" x "+mult +" = " + number * mult+"<br>");
+                mult++;
+            }
+            document.write("<br>");
+            number++;
+        }
+
+
+        numberOne =10;
+        while (numberOne--){
+            document.write(numberOne + "<br>");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

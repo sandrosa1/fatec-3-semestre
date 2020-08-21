@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metodos para Array</title>
+    <script>
+        var mochila = [];
+        var mochilaOne = [];
+        var mochilaTwo = [];
+
+        var numbers = [5,8,4,9,7,6,3,0,2,1];
+        //Put in order the elements of an array, in order crescent
+        numbers.sort();
+        //invert the order that is in moment
+        numbers.reverse();
+        //Join all the elements in a string comma-separated
+        joinAll = numbers.join();
+
+        document.write(numbers[0] + "<br>");
+        document.write(numbers[1] + "<br>");
+        document.write(numbers[2] + "<br>");
+        document.write(numbers[3] + "<br>");
+        document.write(numbers[4] + "<br>");
+        document.write(numbers[5] + "<br>");
+        document.write(numbers[6] + "<br>");
+        document.write(numbers[7] + "<br>");
+        document.write(numbers[8] + "<br>");
+        document.write(numbers[9] + "<br>");
+
+        document.write(joinAll + "<br>");
+
+
+        // The  function push insert the elements in the end of Array
+        mochilaOne.push("Faca");
+        mochilaOne.push("Corda");
+        mochilaOne.push("Pederneira");
+        mochilaOne.push("Chave");
+        mochilaOne.push("Lanterna");
+
+        mochilaTwo.push("Arame");
+        mochilaTwo.push("Luvas");
+        mochilaTwo.push("Canivete");
+        mochilaTwo.push("Arco");
+        mochilaTwo.push("Flechas");
+
+        // concatenate two arrays
+        mochila = mochilaOne.concat(mochilaTwo);
+
+        document.write(mochila[0]+"<br>");
+        document.write(mochila[1]+"<br>");
+        document.write(mochila[2]+"<br>");
+        document.write(mochila[3]+"<br>");
+        document.write(mochila[4]+"<br>");
+        document.write(mochila[5]+"<br>");
+        document.write(mochila[6]+"<br>");
+        document.write(mochila[7]+"<br>");
+        document.write(mochila[8]+"<br>");
+        document.write(mochila[9]+"<br>");
+
+
+
+        // Checks if the element is inside of Array, and return the position.
+        // case the element not is in the Array, It returns -1 (false)
+        //document.write(mochila.indexOf("Chave"));
+
+        isInArray = mochila.indexOf("Pederneira");
+
+        if(isInArray < 0){
+            document.write("The item isn't in backpack <br>");
+        }else {
+            document.write("The item is in backpack.<br>Position: "+isInArray +"<br>");
+        }
+        // The length function return the size of array.
+        document.write("Amount of elements in backpack one: "+ mochilaOne.length +"<br>");
+        document.write("Amount of elements in backpack two: "+ mochilaTwo.length +"<br>");
+        document.write("Amount of elements in backpack: "+ mochila.length +"<br>");
+
+
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

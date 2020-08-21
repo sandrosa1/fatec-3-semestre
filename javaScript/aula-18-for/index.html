@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>For</title>
+    <script>
+        var counter;
+        var numbers =[1,2,3,8,5,6];
+        var num = [];
+        var line;
+        var backpack = [["Corda",10],["Cura",5],["Lanterna",1],["Pilhas",20]];
+
+        for(counter = 0; counter < 10; counter++){
+            document.write("Sandro:" +counter +"<br>");
+        }
+
+        for(counter = 0; counter < numbers.length ; counter++){
+            document.write(numbers[counter] +"<br>");
+        }
+
+        for(counter = 0; counter < 4; counter++){
+            num.push(prompt("Digite os numeros"));
+        }
+
+        for(counter = 0; counter < 4; counter++){
+            document.write(num[counter]+"<br>");
+        }
+
+
+        for(line =0; line < backpack.length;line++)
+        {
+            for (counter = 0;counter <2; counter++)
+            {
+                document.write(backpack[line][counter]+" ");
+            }
+            document.write("<br>");
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>try catch finally</title>
+    <script>
+        /*
+        try{
+            document.wriite("Sandro Amancio");
+
+        }catch(e){
+            document.write("ERRO "+ e.message);
+            //So aparece no F12(programador) console
+            console.log("Messagem de erro " + e.message);
+        }
+        */
+
+
+        var number;
+
+        try{
+            number = prompt("Digite um numero.");
+            //Gera um erro manualmente
+            if(number > 10)
+            {
+                throw new Error("Valor Inválido, precisa ser menor que 10."+"<br>");
+            }
+            document.write("Valor: "+ number+"<br>");
+        }catch (e){
+            document.write("ERRO: " + e.message+"<br>");
+        }finally {
+            document.write("Fim do programa.");
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch-case</title>
+    <script>
+        var posicao, msg, pontos;
+
+        pontos = 599;
+
+        if (pontos >= 1000){
+            posicao = 1;
+        }
+        else if(pontos >= 800){
+            posicao = 2;
+        }else if (pontos >= 600){
+            posicao = 3;
+        }else {
+            posicao = 0;
+        }
+
+        switch (posicao)
+        {
+            case 1:
+                msg = "Parabéns você chegou em primeiro";
+                break;
+            case 2:
+                msg ="Parabéns você chegou em Segundo";
+                break;
+            case 3:
+                msg = "Parabéns você chegou em terceiro";
+                break;
+            default:
+                msg = "Nâo obteve colocação";
+        }
+        switch (posicao)
+        {
+            case 1:
+            case 2:
+            case 3:
+                msg+= "<br>Subiu ao podium";
+                break;
+            default:
+                msg+= "<br>Nâo foi ao podium";
+        }
+        document.write(msg);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
