@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>innerHtml</title>
+</head>
+<body>
+    <p id="texto">Hello, World!</p>
+    <input type ="texto" id="extexto" value="Hello word">
+    <div id="dv">Texto na dentro da div</div>
+    <script>
+        //captura o elemento do input
+        //pode atribuir ou valor para input
+        document.getElementById("extexto").value = "Curso de JavaScript";
+        // pode ser armazenado dentro de variáveis
+        // var txt = document.getElementById("extexto").value = "Curso de JavaScript";
+        //alert(txt);
+        // captura o que estiver em tag com o script innerHTML
+        // também pode ser modificado o valor da tag .innerHTML="ALGUMA COISA";
+        var txt2 = document.getElementById("texto").innerHTML;
+        alert(txt2);
+        document.getElementById("dv").style.border="2px solid blue";
+        document.getElementById("dv").innerHTML= "Utilizando o innerHTML para alteração.";
+    </script>
+</body>
+</html>

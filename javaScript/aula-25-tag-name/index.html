@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>tag name</title>
+</head>
+<body>
+<h1>
+    .getElementByTagName
+</h1>
+<p>Sandro Amancio de Sa</p>
+<p>muito bom obrigado</p>
+<p>Show de bola</p>
+<p>thanks</p>
+
+
+<hr>
+
+<script>
+    // Primeira maneira
+    //var tagssP = document.getElementsByTagName("p");
+
+    //document.write(tagssP[0].innerHTML);
+
+
+    //Segunda maneira
+    //var tagssP = document.getElementsByTagName("p")[3];
+
+    //document.write(tagssP.innerHTML);
+    //	tagssP.style.color="Red";
+
+    var tagssP = document.getElementsByTagName("p");
+
+    for(var i = 0; i < tagssP.length ;i++){ tagssP[i].style.color="Red"; }
+</script>
+
+
+
+</body>
+</html>
