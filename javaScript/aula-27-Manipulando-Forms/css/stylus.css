@@ -1,0 +1,14 @@
+@charset "utf-8 pt-BR";
+
+label
+{
+    display: block;
+}
+input
+{
+    display: block;
+}
+input[type=submit],label
+{
+    margin-top: 10px;
+}
