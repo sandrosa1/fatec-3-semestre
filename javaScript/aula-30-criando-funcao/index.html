@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funções</title>
+    <script>
+
+        function escrever(){
+            document.write("Função escrever escrevendo<br>")
+        }
+        //chamando função
+        escrever()
+        escrever()
+        escrever()
+        // Função com paramentro
+        function soma(n1,n2){
+            res = n1 + n2
+            document.write(n1 + " + " + n2 +" = "+ res+"<br>")
+        }
+        soma(15,10)
+        soma(4,10.5)
+        soma(30,40)
+        soma(180,30)
+    // função que retorna valor
+
+        function retornaSoma(n1,n2){
+            return n1 +n2
+        }
+        //Armazenando resultado na variavel
+        res = retornaSoma(10,15)
+        document.write(res+"<br>")
+        //Imprimindo direto o resultdo
+        document.write("Retornando a função soma "+retornaSoma(10,15)+"<br>")
+
+        //função com array
+        var numeros = new Array(50,50,50,50,50,50,50,50)
+        function media(nuns){
+            var tam = nuns.length
+            var soma = 0
+            for(i = 0; i < tam; i++)
+            {
+                soma += nuns[i]
+            }
+            return Math.round(soma/tam)
+        }
+        med = media(numeros)
+        document.write("Resultado da media = "+ med)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

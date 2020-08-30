@@ -4,17 +4,42 @@
     <meta charset="UTF-8">
     <title>Data e Hora</title>
     <script>
+        //get retorna
+        //set configura
         dt = new Date()
-        diaSemana = dt.getDay()
-        dia = dt.getDate()
-        mes = dt.getMonth()
-        ano = dt.getFullYear()
-        horas = dt.getHours()
-        minutos = dt.getMinutes()
-        segundos = dt.getSeconds()
+        //novoData = new Date()
+
+        // Manipulando datas
+        novoData = new Date(1977, 8, 25, 10, 10, 58) // Ano, Mes -1, Dia, Hora, Minutos, Segundos tirar //*
+
+
+
+        // diaSemana = dt.getDay()
+        // dia = dt.getDate()
+        //mes = dt.getMonth()
+        // ano = dt.getFullYear()
+        // horas = dt.getHours()
+        // minutos = dt.getMinutes()
+        //segundos = dt.getSeconds()
+
+        // Acrensetando ou diminui mais dias no calendario
+        //novoData.setDate(dt.getDate()+10)
+
+        // Acrensetando ou diminui mais anos no calendario
+        //novoData.setFullYear(dt.getFullYear()-10) //*
+
+        diaSemana = novoData.getDay()
+        dia = novoData.getDate()
+        mes = novoData.getMonth()
+        ano = novoData.getFullYear()
+        horas = novoData.getHours()
+        minutos = novoData.getMinutes()
+        segundos = novoData.getSeconds()
+
+
         meses = new Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro")
         semanas = new Array("Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sabado")
-        document.write("Dia da semana "+diaSemana +"<br>")
+        document.write("Dia da semana "+ diaSemana +"<br>")
         document.write("data "+dia+"<br>")
         document.write("Mês tem que somar mais um "+ mes + "<br>")
         document.write(semanas[diaSemana] + ", "+ dia + " de "+ meses[mes] +" de " + ano + "<br>")
