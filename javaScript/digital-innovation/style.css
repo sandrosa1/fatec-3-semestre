@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243,243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.instagram-wrapper{
+    /* deixa todos elementos em linha cada um com seu tamanho */
+    display: flex;
+    /* alinhamento vertical do items */
+    align-items: center;
+    /* alinhamento da esquerda para direita */
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+
+}
+
+.instagram-phone{
+
+     /* deixa todos elementos em linha cada um com seu tamanho */
+     display: flex;
+     /* alinhamento vertical do items */
+     align-items: center;
+     /* alinhamento no centro */
+     justify-content: start;
+     width: 50%;
+}
+
+.instagram-phones img {
+    height: 50em;
+}
+
+.instagram-continue {
+
+    display: flex;
+    align-items: center;  
+    justify-content: space-around;
+    /* muda a direção dos eixo para coluna 
+    allign-itens na vertical e justify-content
+     nahorizontal */
+    flex-direction: column;
+    width: 50%;
+    height: 34rem;
+    
+}
+
+.group {
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: solid 1px lightgray;
+}
+
+/* Pega os filhos do elemento 1*/
+.group:nth-child(1){
+    min-height: 19rem;
+}
+
+.instagram-logo{
+    height: 3rem;
+
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* Para imagem nao exeder o tamanho da div  */
+    overflow: hidden;
+}
+
+.profile-photo img {
+    height: 6rem;
+}

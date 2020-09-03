@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // nc está dentro do escopo
+        function cor1(){
+            var nc1 = "azul"
+            document.write(nc1 + " = azul<br>")
+        }
+        cor1()
+
+        // Dentro do escopo da função e possivel ter as variáveis com o mesmo nomes das globais
+        //Não é uma boa pratíca
+        var nc2 = "vermelho"
+        function cor2(){
+            var nc2 = "azul"
+            document.write(nc2 + " = azul<br>")
+        }
+        cor2()
+        document.write(nc2 +" = vermelho<br>")
+
+        //Utilar a variaval global
+        var nc3 = "vermelho"
+        function cor3(){
+            nc3 = "azul"
+            document.write(nc3 +" = azul<br>")
+        }
+        cor3()
+        document.write(nc3 + " = azul<br>")
+
+        //this chama variavel global
+        var nc4 ="vermelho"
+        function cor4(){
+            var nc4 = "azul"
+            document.write(this.nc4 +"->variavel global/ "+nc4 +" ->Variavél local")
+        }
+        cor4()
+    </script>
+</head>
+<body>
+   
+</body>
+</html>
