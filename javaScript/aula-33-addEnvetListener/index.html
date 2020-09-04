@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+    <style>
+        html, body{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        #dv1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000000;
+            background-color: #ff0000;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+    <script>
+        // Maneira1
+        /*function msg(){
+            alert("Bom Dia")
+        }
+
+        function cor1(){
+            var obj = document.getElementById("dv1")
+            obj.style.backgroundColor ="#fff"
+        }
+        function cor2(){
+            var obj = document.getElementById("dv1")
+            obj.style.backgroundColor ="#f00"
+        }
+
+        // Inicializção dos eventos
+        function addEnventos(){
+            var obj = document.getElementById("dv1")
+            obj.addEventListener("click",msg)
+            obj.addEventListener("mouseover", cor1)
+            obj.addEventListener("mouseout", cor2)
+
+
+        }
+
+        window.addEventListener("load", addEnventos)*/
+
+        //Maneira 2
+        function msg(){
+            alert("Bom Dia")
+        }
+
+        function cor(obj, cor){
+            obj.style.backgroundColor = cor
+
+        }
+
+        // Inicializção dos eventos
+        function addEnventos(){
+            var obj = document.getElementById("dv1")
+            obj.addEventListener("click",msg)
+            obj.addEventListener("mouseover",function(event){
+                cor(obj,"#fff")
+            })
+            obj.addEventListener("mouseout",function(event){
+                cor(obj,"#f00")
+            })
+
+
+        }
+
+        window.addEventListener("load", addEnventos)
+
+
+    </script>
+
+</head>
+<body>
+    <!--<div id="dv1" onclick="msg()"></div>-->
+    <div id="dv1"></div>
+    
+</body>
+</html>

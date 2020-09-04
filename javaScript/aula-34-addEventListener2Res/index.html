@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+    <style>
+        html, body{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        #dv1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000000;
+            background-color: #ffffff;
+            position:absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+    <script>
+
+        var eixox = 0;
+        var eixoy = 0;
+        var obj;
+        function move(){
+            obj = document.getElementById("dv1");
+            var tecla = event.keyCode;
+            cor(obj, "#f00");
+            //Esquerda tecla 37   - Cima tecla 38   -  Direita tecla 39   -  Baixo tecla 40
+            //
+            if( tecla == 37 )
+            {
+                eixox -= 10;
+                obj.style.left = eixox +"px";
+            }
+            else if(tecla == 38)
+            {
+                eixoy -= 10;
+                obj.style.top = eixoy +"px";
+
+            } 
+            else if(tecla == 39)
+            {
+                eixox += 10;
+                obj.style.left = eixox +"px";
+
+            }
+            else if(tecla == 40)
+            {
+                eixoy += 10;
+                obj.style.top = eixoy +"px";
+
+            }
+            
+           
+        }
+
+        function addClique(){
+            document.addEventListener("keydown", move);
+        }
+
+        function iniciar(){
+            obj = document.getElementById("dv1");
+            obj.addEventListener("click", addClique);
+        }
+
+
+        window.addEventListener("load", iniciar);
+    </script>
+
+</head>
+<body>
+    <div id="dv1"></div>
+    
+</body>
+</html>

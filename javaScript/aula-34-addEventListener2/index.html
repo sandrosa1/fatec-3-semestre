@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+    <style>
+        html, body{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        #dv1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000000;
+            background-color: #ff0000;
+            position:absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+    <script>
+
+
+// Opção 1
+        /*var eixox = 0;
+        var eixoy = 0;
+
+        document.addEventListener("keydown", function(event){
+            
+            var obj = document.getElementById("dv1");
+            var tecla = event.keyCode;
+            //Esquerda tecla 37   - Cima tecla 38   -  Direita tecla 39   -  Baixo tecla 40
+            if( tecla == 37 )
+            {
+                eixox -= 10;
+                obj.style.left = eixox +"px";
+            }
+            else if(tecla == 38)
+            {
+                eixoy -= 10;
+                obj.style.top = eixoy +"px";
+
+            } 
+            else if(tecla == 39)
+            {
+                eixox += 10;
+                obj.style.left = eixox +"px";
+
+            }
+            else if(tecla == 40)
+            {
+                eixoy += 10;
+                obj.style.top = eixoy +"px";
+
+            }
+
+        });*/
+        
+//Opção 2 movendo a div e parando
+/*var eixox = 0;
+        var eixoy = 0;
+        function move(){
+            var obj = document.getElementById("dv1");
+            var tecla = event.keyCode;
+            //Esquerda tecla 37   - Cima tecla 38   -  Direita tecla 39   -  Baixo tecla 40
+            //
+            if( tecla == 37 )
+            {
+                eixox -= 10;
+                obj.style.left = eixox +"px";
+            }
+            else if(tecla == 38)
+            {
+                eixoy -= 10;
+                obj.style.top = eixoy +"px";
+
+            } 
+            else if(tecla == 39)
+            {
+                eixox += 10;
+                obj.style.left = eixox +"px";
+
+            }
+            else if(tecla == 40)
+            {
+                eixoy += 10;
+                obj.style.top = eixoy +"px";
+
+            }
+            else if(tecla == 13)
+            {
+                alert("Evento Removido");
+                // document or this
+                this.removeEventListener("keydown", move);
+
+
+            
+            }
+           
+        }
+        document.addEventListener("keydown", move);*/
+
+        
+        
+       // teste para
+        var eixox = 0;
+        var eixoy = 0;
+        function move(){
+            var obj = document.getElementById("dv1");
+            var tecla = event.keyCode;
+            cor(obj, "#f00");
+            //Esquerda tecla 37   - Cima tecla 38   -  Direita tecla 39   -  Baixo tecla 40
+            //
+            if( tecla == 37 )
+            {
+                eixox -= 10;
+                obj.style.left = eixox +"px";
+            }
+            else if(tecla == 38)
+            {
+                eixoy -= 10;
+                obj.style.top = eixoy +"px";
+
+            } 
+            else if(tecla == 39)
+            {
+                eixox += 10;
+                obj.style.left = eixox +"px";
+
+            }
+            else if(tecla == 40)
+            {
+                eixoy += 10;
+                obj.style.top = eixoy +"px";
+
+            }
+            else if(tecla == 13)
+            {
+                alert("Evento Removido");
+                addEnventos()
+                 
+            }
+           
+        }
+
+
+        function cor(obj, cor){
+            obj.style.backgroundColor = cor
+
+        }
+        function addEnventos(){
+            var obj = document.getElementById("dv1");
+            cor(obj,"#fff")
+            this.removeEventListener("keydown", move);
+        }
+
+        function mover(){
+            alert("Evento ligado");
+            document.addEventListener("keydown", move);
+             
+        };
+
+        
+
+        document.addEventListener("keydown", move);
+    </script>
+
+</head>
+<body>
+    <div id="dv1" onclick=""></div>
+    
+</body>
+</html>
