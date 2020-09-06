@@ -21,6 +21,7 @@
         }
     </style>
     <script>
+        window.addEventListener("load", iniciar);
 
         var eixox = 0;
         var eixoy = 0;
@@ -28,9 +29,8 @@
 
 
         function mover(){
-            obj = document.getElementById("dv1");
-            var tecla = event.keyCode;
-            cor(obj, "#f00");
+
+            var tecla = event.keyCode
             //Esquerda tecla 37   - Cima tecla 38   -  Direita tecla 39   -  Baixo tecla 40
             //
             if( tecla == 37 )
@@ -56,21 +56,30 @@
                 obj.style.top = eixoy +"px";
 
             }
+            else if(tecla == 13)
+            {
+                alert("Deligado")
+                obj.removeEventListener("keydown",mover)
+                obj.style.backgroundColor = "#fff"
+
+            }
             
            
         }
 
         function addClique(){
             document.addEventListener("keydown", mover);
+            obj.style.backgroundColor = "#f00"
         }
 
         function iniciar(){
             obj = document.getElementById("dv1");
             obj.addEventListener("click", addClique);
+            
         }
 
 
-        window.addEventListener("load", iniciar);
+        
     </script>
 
 </head>
