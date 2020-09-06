@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+    <style>
+        #rel1{
+            background-color:red;
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 3px 3px 8px black;
+        }
+        #rel2{
+            text-align:center;
+            color:#0f0;
+            font-weight: bold;
+            font-size: 30px;
+            width: 130px;
+            background-color: #000;
+        }
+        #rel3{
+            border-radius: 50%;
+            text-align:center;
+            color:#0f0;
+            font-weight: bold;
+            font-size: 30px;
+            width: 150px;
+            background-color: #000;
+        }
+        </style>
+    
+    
+        <script>
+            function relogio(){
+                var data=new Date();
+                var hora=data.getHours();
+                var minuto=data.getMinutes();
+                var segundo=data.getSeconds();
+    
+    
+                if(segundo < 10){
+                    segundo = "0"+segundo;
+                }
+                if(minuto < 10){
+                    minuto = "0"+minuto;
+                }
+                if(hora < 10){
+                    hora = "0"+hora;
+                }
+                var horario=hora+":"+minuto+":"+segundo;
+    
+    
+                document.getElementById("rel1").value=horario;
+                document.getElementById("rel2").value=horario;
+                document.getElementById("rel3").value=horario;
+
+
+                
+            }
+            setInterval(relogio,1000);
+            
+            window.addEventListener("load",relogio);
+        </script>
+    </head>
+    <body>
+        <input type="text" id="rel1">
+        <input type="text" id="rel2">
+        <input type="text" id="rel3">
+</body>
+</html>
