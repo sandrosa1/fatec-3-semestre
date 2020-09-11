@@ -1,27 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <meta name="viewport" content="width=device-width, 
+        initial-scale=1.0">
     <title>Sorte</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .container {
+            width: 100%;
+            display: block;
+            background-color: #0f0;
+
+
+        }
+
+        #dv1,
+        #dv2 {
+            width: 100%;
+            border: 3px solid #000;
+            color: #000;
+            margin-top: 20px;
+        }
+    </style>
+
 </head>
+
 <body>
+    <div class="container">
+        <div id="dv1">
+            <h2>Boa Sorte</h2>
+            <!--input oculta para extrutura-->
+            <input type="hidden" id="valor" /><br><br>
+            <label>Escolha o tipo de Loteria.</label><br>
+            <select id="operacao">
+                <option value="loto">Lotofacil</option>
+                <option value="mega">Mega Sena</option>
+                <option value="quina">Quina</option>   
+            </select><br><br>
+            <label>Quantidade de Dezenas.</label><br>
+            <input type="text" id="dezenas" /><br><br>
+            <label>Quantidade de jogos.</label>
+            <input type="text" id="quantidade"/>
+            <input type="button" id="botao" value="executar" /><br><br>
+        </div>
+        <div id="dv2">
 
-<div class="container">
-    <h2>Boa Sorte</h2>
+        </div>
+    </div>
+    <script>
+        var ret = document.getElementById("dv2")
+        var operacao = document.getElementById("operacao").value
+        var dezenas = document.getElementById("dezenas").value
+        var quantidade = document.getElementById("quantidade").value
+        var jogo = []
+        var tipo
+        botao.addEventListener("click", function () 
+        {
 
-    <!--input oculta para extrutura-->
-    <input type="hidden" id="valor"/><br><br>
-    <label>Selecione o Jogo</label>
-    <select id="operacao">
-        <option value="mega">Mega-Sena</option>
-        <option value="quina">Quina</option>
-        <option value="loto">Lotofacil</option>
-    </select><br><br>
-    <input type="button" id="botao" value="executar"/><br><br>
-    <input type="text" id="resultado" /><br><br>
-</div>
-    <script src="script.js"></script>
+            if(operacao == "mega")
+            { 
+                tipo = 59
+                loteria(dezenas, quantidade, tipo)
+
+            }
+            else if (operacao == "loto")
+            {
+                tipo = 24
+                loteria(dezenas, quantidade, tipo)
+
+            }
+            else if(operacao == "quina")
+            {
+                tipo = 79
+                loteria(dezenas, quantidade, tipo)
+
+            }
+            
+        });
+
+        function loto(obj1, obj2, obj3) {
+            var quant = 0
+            while (quant < obj1) {
+                var numMega = obj3
+                var cont = 0
+                total = (Math.round(Math.random() * numMega) + 1);
+                for (i = 0; i <= jogo.length; i++) {
+                    if (jogo[i] == total) {
+                        cont += 1
+                    }
+
+                }
+                if (cont == 0) {
+                    jogo[quant] = total
+
+
+                    quant += 1
+                }
+
+            }
+
+            jogo.sort(function (a, b) {
+                return a - b
+            });
+
+            mensagem(ret, jogo);
+            style(ret);
+        }
+
+        function mensagem(obj1, obj2) {
+            obj1.innerHTML = obj2;
+        };
+
+        function style(obj1) {
+            obj1.style.color = "#00f";
+            obj1.style.fontSize = "15px";
+        };
+    </script>
+
 </body>
+
 </html>

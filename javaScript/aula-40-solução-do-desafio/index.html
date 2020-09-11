@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Animation Frame</title>
+    <style>
+        #jogador
+        {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #00f;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000000;
+            border-radius: 100%;
+        }
+
+    </style>
+    <script>
+
+        var jog
+        var vel
+        var dx
+        var dy
+        var px
+        var py
+        var anima
+
+
+        function inicia() {
+
+            vel = 1
+            dx = 1
+            dy = 0
+            px = 0
+            py = 0
+            jog = document.getElementById("jogador")
+            jog.addEventListener("click", function(){
+                cancelAnimationFrame(anima)
+            })
+            // So movimenta uma v
+            game()
+
+        }
+
+        function game(){
+
+            px += dx*vel
+            //py += py*vel
+            jog.style.left = px + "px"
+            //jog.style.top = py + "px"
+            if(px > 800){
+                dx -= 1
+            }else if(px < 10){
+                dx += 1
+            }
+            // Movimentação costante em loop infinito
+            anima = requestAnimationFrame(game)
+
+
+
+        }
+
+
+        window.addEventListener("load", inicia);
+    </script>
+
+</head>
+
+<body>
+<div id="jogador"></div>
+</body>
+</html>
