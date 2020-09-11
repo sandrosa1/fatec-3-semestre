@@ -1,75 +1,112 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Animation Frame</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript - Aula 40</title>
+
+
     <style>
-        #jogador
-        {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #00f;
-            width: 50px;
-            height: 50px;
-            border: 1px solid #000000;
-            border-radius: 100%;
+        #tela{
+            position: relative;
+            margin: auto;
+            top: 100px;
+            width: 800px;
+            height: 100px;
+            background-color: #ccc;
+            border: solid 5px #333;
+            border-radius: 1%;
+        }
+
+        #jogador{
+            position: relative;
+            top: 0px;
+            left: 0px;
+            margin: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: #888;
+            border-radius: 5%;
         }
 
     </style>
     <script>
 
-        var jog
-        var vel
-        var dx
-        var dy
-        var px
-        var py
-        var anima
+        window.addEventListener('load', iniciarJogo)
+
+        var jogador
+        var direçãoX
+        var eixoX
+        var evento
+        var estado          // Movimentando ou Parado
+        var botãoIniciar
+        var botãoParar
 
 
-        function inicia() {
+        function iniciarJogo () {
 
-            vel = 1
-            dx = 1
-            dy = 0
-            px = 0
-            py = 0
-            jog = document.getElementById("jogador")
-            jog.addEventListener("click", function(){
-                cancelAnimationFrame(anima)
+            jogador = document.getElementById('jogador')
+            eixoX = 0
+            estado = false
+            botãoIniciar = document.getElementById('botãoIniciar')
+            botãoParar = document.getElementById('botãoParar')
+            botãoIniciar.addEventListener('click', function(event){
+                if (!estado) {
+                    moverJogador()
+                }
             })
-            // So movimenta uma v
-            game()
+            botãoParar.addEventListener('click', function(event){
+                pararJogador()
+            })
+
+            jogador.addEventListener('click', escolherAção)
+
 
         }
 
-        function game(){
+        function escolherAção () {
 
-            px += dx*vel
-            //py += py*vel
-            jog.style.left = px + "px"
-            //jog.style.top = py + "px"
-            if(px > 800){
-                dx -= 1
-            }else if(px < 10){
-                dx += 1
+
+            if (estado) {
+                pararJogador()
+            } else {
+                moverJogador()
             }
-            // Movimentação costante em loop infinito
-            anima = requestAnimationFrame(game)
+        }
 
-
-
+        function moverJogador () {
+            estado = true
+            jogador.style.backgroundColor = '#c33'
+            if (eixoX <= 0 ) {
+                direçãoX = 5
+            } else if (eixoX >= 700) {
+                direçãoX = -5
+            }
+            eixoX += direçãoX
+            jogador.style.left = eixoX + 'px'
+            evento = requestAnimationFrame(moverJogador)
         }
 
 
-        window.addEventListener("load", inicia);
-    </script>
+        function pararJogador () {
+            estado = false
+            jogador.style.backgroundColor = '#888'
+            cancelAnimationFrame(evento)
+        }
 
+    </script>
 </head>
 
+
 <body>
-<div id="jogador"></div>
+<article>
+    <input type = 'button' id = 'botãoIniciar' value = 'Iniciar'>
+    <input type = 'button' id = 'botãoParar' value = 'Parar'>
+    <div id = 'tela'>
+        <p id = 'jogador'></p>
+    </div>
+</article>
 </body>
 </html>
