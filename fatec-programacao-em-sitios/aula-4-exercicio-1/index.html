@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylus.css" rel="stylesheet">
+
+    <title>Olá, mundo!</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class=" d-block">
+            <h2 class=" text-lg-center">Fomulario de cadastro</h2>
+        </div>
+        <div id="cadastro">
+            
+                <label id="rNome">Informe seu nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Seu nome" maxlength="50">
+
+                <label id="rOperacao">Gênero</label>
+                <select class="custom-select mr-sm-2" id="operacao" >
+                    <option value="">Genero...</option>
+                    <option value="m">Masculino</option>
+                    <option value="f">Feminino</option>
+                </select>
+
+                <label id="rCpf">Informe seu CPF.</label>
+                <input type="text" class="form-control" id="cpf" maxlength="11" placeholder="Seu CPF">
+
+                <label id="rIdade">Informe sua idade</label>
+                <input type="text" class="form-control" id="idade" maxlength="3" placeholder="Sua idade">
+                <br>
+                <button type="submit" id="botao" class="btn btn-primary" value="cadastrar">Enviar</button>
+           
+        </div>
+
+        <div id="resposta">
+            <p id="msg"></p>
+            <p id="respostaNome"></p>
+            <p id="respostaSuceeso"></p>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+
+    <script src="js/meuscript.js"></script>
+</body>
+
+</html>

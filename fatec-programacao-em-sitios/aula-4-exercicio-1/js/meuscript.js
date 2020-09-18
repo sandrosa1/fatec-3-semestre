@@ -21,6 +21,9 @@ var numberCpf
 var cont
 var stringCpf
 
+
+// 
+
 //Reponsavel pela estilizaçao dos campos
 function addEnventos()
 {
@@ -257,47 +260,106 @@ function cor(obj, cor){
     obj.style.borderColor = cor
 
 }
+//function event()
+// {
+//     stylus(dadoNome,"#D3D3D3")
+//     stylus(dadoCPF,"#D3D3D3" )
+//     stylus(dadoIdade,"#D3D3D3")
+//     stylus(botao,"#87CEEB")
+//     stylus(dadoSexo ,"#87CEEB")
+//     next(dadoNome,dadoSexo)
+//     next(dadoSexo,dadoCPF)
+//     next(dadoCPF,dadoIdade)
+//     next(dadoIdade,botao)
+    
+// }
+
+// function stylus(obj, color) {
+
+//     obj.addEventListener('focus', function () {
+//         obj.style.backgroundColor = color
+//     })
+
+
+//     obj.addEventListener('blur', function () {
+
+//         if(obj == dadoCPF && obj.value == "") {
+
+//             obj.style.backgroundColor = '#f00'
+//             mensagemError(situacaoCPF, 'Favor informar o CPF!')
+//             existeErro = true
+
+//         }
+//         else if(obj == dadoSexo && obj.value == "") {
+
+//             obj.style.backgroundColor = '#f00'
+//             mensagemError(situacaoSexo, 'Favor informar o gênero!')
+//             existeErro = true
+
+//         }
+//         else if(obj == dadoIdade && obj.value == "") {
+
+//             obj.style.backgroundColor = '#f00'
+//             mensagemError(situacaoIdade, 'Favor informar a idade!')
+//             existeErro = true
+
+//         }
+//         else if(obj == dadoNome && obj.value == "") {
+
+//             obj.style.backgroundColor = '#f00'
+//             mensagemError(situacaoNome, 'Favor informar o gênero!')
+//             existeErro = true
+
+//         }
+//         else if(obj.value) {
+
+//             obj.style.backgroundColor = '#0f0'
+            
+//         }
+//         else if(existeErro) {
+
+//             mensagemError(msgStatus, 'Cadastro incompleto')
+//             botao.style.backgroundColor = '#f00'
+            
+//         }
+//         else {
+//             obj.style.backgroundColor = '#0f0'
+
+
+//         }
+//     })
+
+// }
+// function next(atual, futuro)
+// {
+
+//     atual.addEventListener('keypress', function (event)
+//     {
+//         let tecla = (event.keyCode ? event.keyCode : event.wich)
+
+//         if (tecla == 13)
+//         {
+//             futuro.focus()
+//         }
+//     })
+// }
 
 
 
-//Validaçao modelo 2
+// function mensagemError(obj, msg)
+// {
+//     obj.innerHTML = msg
+//     obj.style.color='#f00'
+// }
 
-/*function validaCpf()
-{
-    // A regex \D+ pega tudo que não é número
-    // O split dividi a string em "pedaços" usando essa regex como delimitadora: ["5", "1", ""];
-    //join, uni ela de novo numa string: "51";
-    //parseInt interpreta a string num número (na base 10)
+// function mensagemSucesso(obj, msg)
+// {
+//     obj.innerHTML = msg
+//     obj.style.color='#0f0'
+// }
 
-    numberCpf = parseInt(dadoCPF.value.split(/\D+/).join(""), 10)
-    //Converte o valor numerico para string
-    stringCpf = numberCpf.toString()
-    if(stringCpf)
-    {
+// function borda(obj, cor)
+// {
+//     obj.style.borderColor = cor
 
-        if(stringCpf.length == 11)
-        {
-            situacaoCPF.style.color = styleSucesso
-            cor(dadoCPF, styleSucesso);
-            cpf = 1
-            calculadoraAposentadoria()
-        }
-        else
-        {
-            mensagem(situacaoCPF,'O CPF deve conter 11 números sem letras!' +numberCpf + "<br>"+stringCpf)
-            situacao(situacaoCPF, styleError)
-            cor(dadoCPF, styleError);
-            cpf = 0
-        }
-
-    }
-    else
-    {
-        mensagem(situacaoCPF,'Informe CPF!')
-        situacao(situacaoCPF, styleError)
-        cor(dadoCPF, styleError);
-        cpf = 0
-    }
-}*/
-
-
+// }
