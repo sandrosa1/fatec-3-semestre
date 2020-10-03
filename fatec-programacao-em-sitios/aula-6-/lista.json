@@ -1,0 +1,72 @@
+[
+  {
+  "nome": "Willian",
+  "idade":37,
+  "casado": true,
+  "salario": 1.50,
+  "conhecimentos": [
+    "PHP",
+    "JS",
+    "C#",
+    "JAVA",
+    "DART",
+    "PASCAL"
+  ],
+  "esperiecias": [
+    {
+      "Linguagem": "PHP",
+      "tempo": "2 anos e 3 meses",
+      "frameworks": [
+        "Laravel",
+        "ColdIgniter",
+        "slim",
+        "Cake"
+      ]
+    },
+    {
+      "Linguagem": "JS",
+      "tempo": "3 anos e 3 meses"
+    }
+  ],
+  "idiomas": [
+    "portugues",
+    "Espanhol",
+    "Ingles"
+  ]
+},
+  {
+    "nome": "Sandro",
+    "idade":37,
+    "casado": true,
+    "salario": 1.50,
+    "conhecimentos": [
+      "PHP",
+      "JS",
+      "C#",
+      "JAVA",
+      "DART",
+      "PASCAL"
+    ],
+    "esperiecias": [
+      {
+        "Linguagem": "PHP",
+        "tempo": "2 anos e 3 meses",
+        "frameworks": [
+          "Laravel",
+          "ColdIgniter",
+          "slim",
+          "Cake"
+        ]
+      },
+      {
+        "Linguagem": "JS",
+        "tempo": "3 anos e 3 meses"
+      }
+    ],
+    "idiomas": [
+      "portugues",
+      "Espanhol",
+      "Ingles"
+    ]
+  }
+]
