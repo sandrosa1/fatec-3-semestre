@@ -1,0 +1,60 @@
+[
+  {
+    "nome": "william",
+    "idade": 37,
+    "casado": true,
+    "salario": 1.50,
+    "conhecimentos": [
+      "PHP",
+      "JS",
+      "C#",
+      "JAVA",
+      "DART",
+      "PASCAL"
+    ],
+    "experiencia": [
+      {
+        "linguagem": "PHP",
+        "tempo" : "2 anos e 3 meses",
+        "frameworks":[
+          "CodeIgniter",
+          "Laravel",
+          "Slim",
+          "Silex",
+          "Cake"
+        ]
+      },
+      {
+        "linguagem": "JS",
+        "tempo" : "4 anos"
+      }
+    ],
+    "idiomas":[
+      "Português",
+      "Espanhol",
+      "Inglês"
+    ]
+  },
+  {
+    "nome": "joana",
+    "idade": 30,
+    "casado": false,
+    "salario": 10000.00,
+    "conhecimentos": [
+      "PHP",
+      "JS"
+    ],
+    "experiencia": [
+      {
+        "linguagem": "PHP",
+        "tempo" : "2 anos e 3 meses",
+        "frameworks":[
+          "CodeIgniter",
+          "Laravel"
+        ]
+      }
+    ],
+    "idiomas":[
+    ]
+  }
+]
