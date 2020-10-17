@@ -1,65 +1,97 @@
 
-cep.addEventListener('input', function () {
+    cep.addEventListener('input', function () {
 
-    if(cep.value.length == 8)
-    {
-        cep = cep.value
-        buscaCep(cep)
-    }
+        let tamanho = cep.value.length
+        if(tamanho == 5)
+        {
+            cep.value =cep.value +'-'
 
-})
+        }
+        else if(cep.value.length == 9)
+        {
+            cep = cep.value
+            buscaCep(cep)
+        }
+    })
 
+    function buscaCep(obj) {
+    var cep = obj
 
-function buscaCep(obj) {
-    cep = obj
-
-    fetch('https://viacep.com.br/ws/${cep}/json/')
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
 
         .then(response => response.json())
         .then(json => {
-            logradouro.value = json.cep +' - ' + json.logradouro
+            logradouro.value =  json.logradouro
+            complemento.value =  json.complemento
+            localidade.value = json.localidade
+            bairro.value =  json.bairro
+            uf.value =  json.uf
+            ibge.value =  json.ibge
+            gia.value = json.gia
+            ddd.value =  json.ddd
+            siafi.value =  json.siafi
+
         })
 
         .catch(erro => console.error('ERRO: '+erro))
 
-}
+    }
+
+    var inputs = document.querySelectorAll("input")
+    var entradas = Array.prototype.slice.call(inputs);
+
+    cadastrar.addEventListener('click',function () {
+        validaCampos()
+    })
+
+    function validaCampos()
+    {
+
+        var cont = 0
+        for (let i =0; i < entradas.length; i++)
+        {
+
+            if(!entradas[i].value)
+            {
+                entradas[i].style.borderColor = "#f00"
+                entradas[i].innerHTML = 'Preencher campos'
+                cont += 1
+
+            }
+            else
+                {
+                entradas[i].style.borderColor = "#0f0"
+            }
+
+        }
+        if(!cont == 0)
+        {
+            alert('Favor preencher todos campos')
+        }
+        else
+        {
+            alert('Operação realizada com sucesso')
+        }
 
 
-//<span>Insira seu CEP para carregar as infromações</span>
-//<input id="cep" type="text">
-  //  <button id="enviar">Enviar</button>
-   // <section id="resultado"></section>
 
-   // <script>
+    }
+    function mensagem(obj, msg){
+        obj.innerHTML = msg
+    }
 
-       // enviar.addEventListener('click', () => {
+    function situacao(obj, cor){
+        obj.style.color = cor
+        alert('chano')
 
-       // fetch(`https://viacep.com.br/ws/${cep.value}/json`)
-            //.then(response => response.json())
-           // .then(cepAjax => {
+    }
 
-                //resultado.innerHTML = `
-           // <span>Cep</span>
-          //  <input type="text" value="${cepAjax.cep}"><br>
-            //<span>logradouro</span>
-           // <input type="text" value="${cepAjax.logradouro}"><br>
-           /// <span>complemento</span>
-           // <input type="text" value="${cepAjax.complemento}"><br>
-           // <span>bairro</span>
-          //  <span>localidade</span>
-           // <input type="text" value="${cepAjax.localidade}"><br>
-           // <span>uf</span>
-          //  <input type="text" value="${cepAjax.uf}"><br>
-            //<span>ibge</span>
-            //<input type="text" value="${cepAjax.ibge}"><br>
-           // <span>gia</span>
-            //<input type="text" value="${cepAjax.gia}"><br>
-           // <span>ddd</span>
-           // <*/input type="text" value="${cepAjax.ddd}"><br>
-            //<span>siafi</span>
-          //  <input type="text" value="${cepAjax.siafi}"><br>
-            `
-           // })
-   // })
+    function cor(obj, cor){
 
-    ///</script>
+        obj.style.Color = cor
+
+    }
+
+
+
+

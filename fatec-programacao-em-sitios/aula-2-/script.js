@@ -23,17 +23,18 @@
 
 
 botao.addEventListener('click', function () {
-    let val1 = valor.value
-    let val2 = valor2.value
-    Soma(val1, val2)
+    var val1 = valor1.value
+    var val2 = valor2.value
 
-    // ExibeTexto(val, val2)
+    //Soma(val1, val2)
+     //ExibeTexto(val1, val2)
     // VerificaSexo(sexo.value)
 })
 
 function Soma(v1, v2) {
     alert(parseInt(v1) + parseInt(v2))
 }
+
 
 function ExibeTexto(v1, v2) {
     alert(`${v1} - ${v2}`)

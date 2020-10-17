@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>forEach vs map vs filter vs reduce</h1>
+    <div id="container"></div>
+    <script>
+        //for each
+        var numeros = [55,3,66,28,73,69]
+
+        //-----------------------------------------------------------------------------//
+
+        // --passa uma função call back numeros.forEach(function(elementoAtula,
+        // indice, array, outroOperadorDeEscopoCasoUseO this))--
+
+        // numeros.forEach(function(Apelido){
+        //     console.log(Apelido)
+        // })
+        //numeros.forEach((elemento, indice) => console.log(elemento,indice))
+      
+        //numeros.forEach(zezinho => console.log(zezinho))
+        //-------------------------------------------------------------------------//
+
+        //numeros.map(elemento => console.log(elemento))
+        //-------------------------------------------------------------------------//
+
+        //numeros.filter(elemento => console.log(elemento))
+        //-----------------------------------------------------------------------------//
+
+        //numeros.reduce((acumulador, elemento, indice) => console.log(elemento))
+
+        // numeros.reduce((acumulador, elemento,) =>{
+        //     console.log(acumulador + ' '+ elemento)
+
+        // })
+
+        // numeros.reduce((acumulador, elemento,) =>{
+        //     console.log(acumulador + ' '+ elemento)
+
+        // },numeros[0] ) //->Valor que inicia o acumulado  e na proxima interação fica nulo
+
+        //-------------------------exemplos------------------------------//
+        //-- Map = processa e retorna um novo array multiplicados por dois
+
+        // const vezesDois = numeros.map(elemento => elemento * 2)
+
+        // console.log(vezesDois)
+
+        //--Filter = filtra e retoran a condição de filtrada--
+        
+        // const numerosPares = numeros.filter(elemento => elemento % 2 === 0)
+
+        // console.log(numerosPares)
+
+
+        //-- Reduce = acumulador soma com elemento a cada interação
+
+        // let somaTotal = numeros.reduce((acumulador, elemento) => acumulador + elemento)
+        // console .log(somaTotal)
+
+        //-- Reduce = acumulador soma com elemento a cada interação
+
+        // let somaTotal = numeros.reduce((acumulador, elemento) => {
+        //     return acumulador + elemento
+           
+        // }, 100)  // --Valor incial do acumulador, pode ser uma variavel
+        // console .log(somaTotal)
+
+        // var nomes = ['João','Thereza','Luciana']
+        // var li = nomes.reduce((strli, elementoAtual)=> {
+        //     return strli + '<li>'+ elementoAtual+ '</li>'
+        // },"") // -- Inciar vazia para o acumulador nao abstrair o primeiro li
+        // console.log(li)
+
+        // container.innerHTML = `<ul>${li}</ul>`
+
+        //---- concatenar funções-------------------//
+
+        const retorna = numeros
+                            .filter(elemento => elemento % 2 ===0 )
+                            .map(elemento => elemento * 2)
+                            .reduce((acumulador, elemento)=> acumulador + elemento)
+        console.log(retorna)
+
+
+    </script>
+
+   
+
+</body>
+</html>
