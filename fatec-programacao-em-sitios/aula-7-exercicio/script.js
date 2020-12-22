@@ -37,7 +37,8 @@
 
     }
 
-    var inputs = document.querySelectorAll("input")
+    var inputs = document.querySelectorAll(".input")
+    console.log(inputs)
     var entradas = Array.prototype.slice.call(inputs);
 
     cadastrar.addEventListener('click',function () {

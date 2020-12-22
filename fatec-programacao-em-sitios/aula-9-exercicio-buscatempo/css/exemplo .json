@@ -1,0 +1,94 @@
+{
+    "by": "woeid",
+    "valid_key": false,
+    "results": {
+        "temp": 20,
+        "date": "06/11/2020",
+        "time": "21:18",
+        "condition_code": "27",
+        "description": "Tempo limpo",
+        "currently": "noite",
+        "cid": "",
+        "city": "Campinas, SP",
+        "img_id": "27n",
+        "humidity": 64,
+        "wind_speedy": "9.8 km/h",
+        "sunrise": "05:19 am",
+        "sunset": "06:23 pm",
+        "condition_slug": "clear_night",
+        "city_name": "Campinas",
+        "forecast": [{
+            "date": "06/11",
+            "weekday": "Sex",
+            "max": 28,
+            "min": 13,
+            "description": "Ensolarado",
+            "condition": "clear_day"
+        }, {
+            "date": "07/11",
+            "weekday": "Sáb",
+            "max": 32,
+            "min": 12,
+            "description": "Ensolarado",
+            "condition": "clear_day"
+        }, {
+            "date": "08/11",
+            "weekday": "Dom",
+            "max": 35,
+            "min": 15,
+            "description": "Ensolarado",
+            "condition": "clear_day"
+        }, {
+            "date": "09/11",
+            "weekday": "Seg",
+            "max": 32,
+            "min": 20,
+            "description": "Tempestades",
+            "condition": "storm"
+        }, {
+            "date": "10/11",
+            "weekday": "Ter",
+            "max": 30,
+            "min": 20,
+            "description": "Tempestades",
+            "condition": "storm"
+        }, {
+            "date": "11/11",
+            "weekday": "Qua",
+            "max": 28,
+            "min": 20,
+            "description": "Tempestades",
+            "condition": "storm"
+        }, {
+            "date": "12/11",
+            "weekday": "Qui",
+            "max": 26,
+            "min": 20,
+            "description": "Tempestades",
+            "condition": "storm"
+        }, {
+            "date": "13/11",
+            "weekday": "Sex",
+            "max": 28,
+            "min": 19,
+            "description": "Parcialmente nublado",
+            "condition": "cloudly_day"
+        }, {
+            "date": "14/11",
+            "weekday": "Sáb",
+            "max": 30,
+            "min": 17,
+            "description": "Parcialmente nublado",
+            "condition": "cloudly_day"
+        }, {
+            "date": "15/11",
+            "weekday": "Dom",
+            "max": 31,
+            "min": 19,
+            "description": "Tempestades",
+            "condition": "storm"
+        }]
+    },
+    "execution_time": 0.0,
+    "from_cache": true
+}

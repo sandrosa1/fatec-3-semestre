@@ -1,0 +1,30 @@
+@charset "UTF - 8";
+
+html {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .topPag{
+      border-color: brown;
+      border: 3px solid;
+  }
+  div{
+    margin-top: 10px;
+  }
+  
+  body{
+    background-image: url("../imagens/praia.jpg");
+    
+   }
+   
+h6,h3,p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  color:black;
+}
